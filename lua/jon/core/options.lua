@@ -21,6 +21,9 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 
 opt.cursorline = false
 
+-- Cursor shape set to block in all modes
+opt.guicursor = { "n-v-i:block" }
+
 -- turn on termguicolors for colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
