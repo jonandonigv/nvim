@@ -54,8 +54,3 @@ opt.undofile = true -- Persistent undo across sessions
 
 -- File explorer settings
 vim.g.netrw_liststyle = 3 -- Tree view in netrw
-
--- Make background transparent
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none",})
--- vim.api.nvim_set_hl(0, "NonText", { bg = "none", })
--- opt.windblend = 10
