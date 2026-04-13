@@ -3,6 +3,7 @@ local opt = vim.opt
 -- Line numbers
 opt.relativenumber = true
 opt.number = true
+opt.colorcolumn = "120"
 
 -- Cursor behavior
 opt.cursorline = false -- Highlight current line
