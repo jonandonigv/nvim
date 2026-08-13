@@ -7,38 +7,35 @@ return {
 
     -- configure nvim-treesitter (parser installation only, the rest is built into Neovim)
     treesitter.setup({
-      install_dir = vim.fn.stdpath("data") .. "/site",
+      parser_install_dir = vim.fn.stdpath("data") .. "/site",
+      ensure_installed = {
+        "json",
+        "javascript",
+        "typescript",
+        "tsx",
+        "yaml",
+        "html",
+        "css",
+        "prisma",
+        "markdown",
+        "markdown_inline",
+        "svelte",
+        "graphql",
+        "bash",
+        "lua",
+        "vim",
+        "dockerfile",
+        "gitignore",
+        "query",
+        "vimdoc",
+        "c",
+        "go",
+        "gomod",
+        "gosum",
+        "zig",
+        "rust",
+      },
     })
-
-    -- ensure these language parsers are installed
-    local parsers = {
-      "json",
-      "javascript",
-      "typescript",
-      "tsx",
-      "yaml",
-      "html",
-      "css",
-      "prisma",
-      "markdown",
-      "markdown_inline",
-      "svelte",
-      "graphql",
-      "bash",
-      "lua",
-      "vim",
-      "dockerfile",
-      "gitignore",
-      "query",
-      "vimdoc",
-      "c",
-      "go",
-      "gomod",
-      "gosum",
-      "zig",
-      "rust",
-    }
-    treesitter.install(parsers)
 
     -- enable treesitter syntax highlighting (Neovim built-in)
     vim.api.nvim_create_autocmd("FileType", {
